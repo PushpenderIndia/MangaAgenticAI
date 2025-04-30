@@ -170,3 +170,21 @@ python app.py
 ```
 celery -A app.celery worker --loglevel=info
 ```
+
+## TeamMate 
+
+<td align="center">
+    <a href="https://github.com/PushpenderIndia">
+        <kbd><img src="https://avatars3.githubusercontent.com/PushpenderIndia?size=400" width="100px;" alt=""/></kbd><br />
+        <sub><b>Pushpender Singh</b></sub>
+    </a><br />
+    <a href="https://github.com/PushpenderIndia" title="Code"> :computer: </a> 
+</td>
+
+<td align="center">
+    <a href="https://github.com/khusburai28">
+        <kbd><img src="https://avatars3.githubusercontent.com/khusburai28?size=400" width="100px;" alt=""/></kbd><br />
+        <sub><b>Khusbu Rai</b></sub>
+    </a><br />
+    <a href="https://github.com/khusburai28" title="Code"> :computer: </a> 
+</td>
