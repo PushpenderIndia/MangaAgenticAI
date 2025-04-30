@@ -173,6 +173,9 @@ celery -A app.celery worker --loglevel=info
 
 ## TeamMate 
 
+<table>
+<tr>
+
 <td align="center">
     <a href="https://github.com/PushpenderIndia">
         <kbd><img src="https://avatars3.githubusercontent.com/PushpenderIndia?size=400" width="100px;" alt=""/></kbd><br />
@@ -188,3 +191,7 @@ celery -A app.celery worker --loglevel=info
     </a><br />
     <a href="https://github.com/khusburai28" title="Code"> :computer: </a> 
 </td>
+
+</tr>
+</tr>
+</table>
