@@ -22,9 +22,7 @@
 
 # Demonstration of the Project
 
-- Click on this below image for playing video
-
-[![IMAGE_ALT](https://img.youtube.com/vi/qYDebYuqkAw/0.jpg)](https://youtu.be/qYDebYuqkAw)
+- https://youtu.be/qYDebYuqkAw
 
 ## Problem Statement
 - Nowadays students face problem due to `low attention span` which is less than a gold fish.
