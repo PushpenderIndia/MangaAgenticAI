@@ -12,9 +12,6 @@
   <a href="https://jupyter.org/">
     <img src="https://img.shields.io/badge/Jupyter-Notebook-%23F37626.svg">
   </a>
-  <a href="https://huggingface.co/">
-    <img src="https://img.shields.io/badge/Model-HuggingFace-%2334D058.svg">
-  </a>
   <a href="https://github.com/PushpenderIndia/MangaAgenticAI">
     <img src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-brightgreen.svg">
   </a>
