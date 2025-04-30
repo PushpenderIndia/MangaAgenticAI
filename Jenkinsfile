@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    git branch: 'main', credentialsId: 'be931eed-297a-4c57-9706-565d76161ee0', url: 'https://github.com/WitesoAI/Comify'
+                    git branch: 'main', credentialsId: 'be931eed-297a-4c57-9706-565d76161ee0', url: 'https://github.com/PushpenderIndia/MangaAgenticAI'
                 }
             }
         }
@@ -31,10 +31,10 @@ pipeline {
                     sh 'sudo systemctl enable redis-server'
                     sh 'sudo service redis-server status'
 
-                    sh 'sudo chmod -R 777 /var/lib/jenkins/workspace/Comify'
-                    sh 'sudo chmod -R 777 /var/lib/jenkins/workspace/Comify/*'
-                    sh 'sudo chown -R jenkins:www-data /var/lib/jenkins/workspace/Comify'
-                    sh 'sudo chown -R jenkins:www-data /var/lib/jenkins/workspace/Comify/*'
+                    sh 'sudo chmod -R 777 /var/lib/jenkins/workspace/MangaAgenticAI'
+                    sh 'sudo chmod -R 777 /var/lib/jenkins/workspace/MangaAgenticAI/*'
+                    sh 'sudo chown -R jenkins:www-data /var/lib/jenkins/workspace/MangaAgenticAI'
+                    sh 'sudo chown -R jenkins:www-data /var/lib/jenkins/workspace/MangaAgenticAI/*'
                 }
             }
         }
@@ -42,17 +42,17 @@ pipeline {
         stage('Install Celery') {
             steps {
                 script {
-                    sh 'sudo cp -rf DevOps/celery_comify.service /etc/systemd/system/'
+                    sh 'sudo cp -rf DevOps/celery_manga.service /etc/systemd/system/'
                     sh 'sudo systemctl daemon-reload'
 
-                    sh 'sudo systemctl stop celery_comify.service'
-                    sh 'sudo systemctl start celery_comify.service'
-                    sh 'echo "celery_comify.service has started."'
+                    sh 'sudo systemctl stop celery_manga.service'
+                    sh 'sudo systemctl start celery_manga.service'
+                    sh 'echo "celery_manga.service has started."'
 
-                    sh 'sudo systemctl enable celery_comify.service'
-                    sh 'echo "celery_comify.service has been enabled."'
+                    sh 'sudo systemctl enable celery_manga.service'
+                    sh 'echo "celery_manga.service has been enabled."'
 
-                    sh 'sudo systemctl status celery_comify.service'
+                    sh 'sudo systemctl status celery_manga.service'
                 }
             }
         }
@@ -60,13 +60,13 @@ pipeline {
         stage('Configure Ngnix') {
             steps {
                 script {
-                    sh 'sudo cp -rf DevOps/comify.conf /etc/nginx/sites-available/comify'
+                    sh 'sudo cp -rf DevOps/manga.conf /etc/nginx/sites-available/manga'
                     try {
-                        sh 'sudo rm /etc/nginx/sites-enabled/comify'
+                        sh 'sudo rm /etc/nginx/sites-enabled/manga'
                     } catch (Exception e) {
                         echo "Nginx Config does'nt exist: ${e.message}"
                     }
-                    sh 'sudo ln -s /etc/nginx/sites-available/comify /etc/nginx/sites-enabled'
+                    sh 'sudo ln -s /etc/nginx/sites-available/manga /etc/nginx/sites-enabled'
                     sh 'sudo nginx -t'
                     sh 'sudo systemctl reload nginx'
                 }
