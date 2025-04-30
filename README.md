@@ -146,7 +146,7 @@ sudo service redis-server status
 pip3 install virtualenv
 
 # Clone Project
-git clone https://github.com/WitesoAI/Comify.git
+git clone https://github.com/PushpenderIndia/MangaAgenticAI
 
 # Navigate to folder
 cd Comify
